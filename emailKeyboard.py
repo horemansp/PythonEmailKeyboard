@@ -12,7 +12,6 @@ win = Tk()
 win.attributes('-fullscreen',True) 
 rowIndex = 0
 keyIndex = 0
-keysWidth = 10
 email = ""
 
 def GetButton(button):
