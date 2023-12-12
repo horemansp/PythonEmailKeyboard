@@ -13,6 +13,8 @@ win.attributes('-fullscreen',True)
 rowIndex = 0
 keyIndex = 0
 email = ""
+xOffset = 10
+yOffset = 150
 
 def GetButton(button):
     global email
@@ -45,7 +47,7 @@ for rowIndex, row in enumerate(keys):
     for keyIndex, key in enumerate(row):
         button = Button(win,text = keys[rowIndex][keyIndex])
         button.config(command=lambda button=button: GetButton(button))
-        button.place(width = keysWidth, height = rowHeight,x=(10+keysWidth * keyIndex),y=(150 + rowHeight * rowIndex))
+        button.place(width = keysWidth, height = rowHeight,x=(xOffset+keysWidth * keyIndex),y=(yOffset + rowHeight * rowIndex))
         button_list.append(button)
     button_list.append([])
 
