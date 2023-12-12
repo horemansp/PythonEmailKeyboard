@@ -33,13 +33,17 @@ def ClearAllWidgets(window):
 def SendButton(window):
     print("Send button pressed")
     ClearAllWidgets(window)
+
+def SendCancel(window):
+    print("Cancel button pressed")
+    #take actions
     
-
-
 labelEmail = Label(win,text = "  enter email  ",font=("Arial",26))
 labelEmail.place(x=20, y=50)
 buttonSend = Button(win,text="Send", font=("Arial",26),command= lambda:SendButton(win))
-buttonSend.place(x=650, y=50)
+buttonSend.place(x=600, y=25, width=150)
+buttonCancel = Button(win,text="Cancel", font=("Arial",26),command= lambda:SendCancel(win))
+buttonCancel.place(x=600, y=80, width=150)
 
 for rowIndex, row in enumerate(keys):
     keysWidth = keyboardWidth // len(row)
